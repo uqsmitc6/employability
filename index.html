@@ -25,7 +25,7 @@
 
         /* Header Section */
         .hero {
-            background: #2a2a2a;
+            background: #ffffff;
             padding: 80px 20px;
             min-height: 600px;
             display: flex;
@@ -35,18 +35,24 @@
         }
 
         .hero-content {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
             position: relative;
-            z-index: 2;
+            width: 100%;
+        }
+
+        .hero-image {
+            width: 100%;
+            position: relative;
         }
 
         .hero-text {
-            text-align: left;
+            position: absolute;
+            left: 60px;
+            top: 50%;
+            transform: translateY(-50%);
+            max-width: 500px;
+            z-index: 10;
         }
 
         .hero img {
@@ -58,7 +64,7 @@
 
         .hero h1 {
             font-size: 3.5em;
-            color: #ffffff;
+            color: #2a2a2a;
             margin-bottom: 20px;
             line-height: 1.2;
             font-weight: 700;
@@ -66,14 +72,14 @@
 
         .hero-subtitle {
             font-size: 1.5em;
-            color: #e8e8e8;
+            color: #4a4a4a;
             margin-bottom: 15px;
             font-weight: 400;
         }
 
         .hero-description {
             font-size: 1.2em;
-            color: #b8b8b8;
+            color: #666;
             margin-bottom: 30px;
             line-height: 1.6;
         }
@@ -83,20 +89,20 @@
             align-items: center;
             gap: 10px;
             padding: 18px 35px;
-            background: #e89baa;
+            background: #3B7C7C;
             color: white;
             text-decoration: none;
             border-radius: 50px;
             font-size: 1.1em;
             font-weight: 600;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(232, 155, 170, 0.3);
+            box-shadow: 0 4px 15px rgba(59, 124, 124, 0.3);
         }
 
         .hero-cta:hover {
-            background: #d8768a;
+            background: #2d6060;
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(232, 155, 170, 0.4);
+            box-shadow: 0 6px 20px rgba(59, 124, 124, 0.4);
         }
 
         .hero-cta::after {
@@ -136,12 +142,12 @@
         }
 
         .btn-coral {
-            background-color: #e89baa;
+            background-color: #3B7C7C;
             color: white;
         }
 
         .btn-coral:hover {
-            background-color: #d8768a;
+            background-color: #2d6060;
         }
 
         .btn-teal {
@@ -269,14 +275,23 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            .hero-content {
-                grid-template-columns: 1fr;
-                gap: 30px;
+            .hero {
+                padding: 40px 20px;
+                min-height: auto;
             }
 
-            .hero {
-                padding: 60px 20px;
-                min-height: auto;
+            .hero-text {
+                position: relative;
+                left: 0;
+                top: 0;
+                transform: none;
+                max-width: 100%;
+                margin-bottom: 30px;
+            }
+
+            .hero-content {
+                display: flex;
+                flex-direction: column;
             }
 
             .hero h1 {
@@ -289,6 +304,10 @@
 
             .hero-description {
                 font-size: 1em;
+            }
+
+            .button-grid {
+                grid-template-columns: 1fr;
             }
 
             .wdigs-header h2 {
@@ -331,70 +350,8 @@
                 <a href="video-case-studies.html" class="btn btn-teal">
                     EmployAbility Video Case Studies
                 </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- WDIGS Section -->
-    <section class="wdigs-section" id="wdigs">
-        <div class="container">
-            <div class="wdigs-header">
-                <h2>The Workplace Disability Inclusion Grant Scheme</h2>
-            </div>
-            <div class="wdigs-description">
-                <p>The Workplace Disability Inclusion Grant Scheme (WDIGS) provides financial support to PNG businesses to create employment opportunities for persons with disability. The scheme recognises that employment is a fundamental human right and aims to reduce barriers that prevent persons with disability from participating in PNG's formal business sector.</p>
-            </div>
-
-            <h3 style="text-align: center; color: #3B7C7C; margin-bottom: 30px; font-size: 1.5em;">Application Package Documents</h3>
-
-            <div class="documents-grid">
-                <a href="downloads/wdigs/Application_Guidelines.pdf" class="document-link" download>
-                    <div class="document-text">
-                        <div class="document-title">Application Guidelines</div>
-                        <div class="document-type">PDF</div>
-                    </div>
-                </a>
-
-                <a href="downloads/wdigs/Eligibility_Checklist.pdf" class="document-link" download>
-                    <div class="document-text">
-                        <div class="document-title">Eligibility Checklist</div>
-                        <div class="document-type">PDF</div>
-                    </div>
-                </a>
-
-                <a href="downloads/wdigs/Application_Form.docx" class="document-link" download>
-                    <div class="document-text">
-                        <div class="document-title">Application Form</div>
-                        <div class="document-type">DOCX</div>
-                    </div>
-                </a>
-
-                <a href="downloads/wdigs/Project_Costings_Template.xlsx" class="document-link" download>
-                    <div class="document-text">
-                        <div class="document-title">Project Costings Template</div>
-                        <div class="document-type">XLSX</div>
-                    </div>
-                </a>
-
-                <a href="downloads/wdigs/Workplan_Template.docx" class="document-link" download>
-                    <div class="document-text">
-                        <div class="document-title">Workplan Template</div>
-                        <div class="document-type">DOCX</div>
-                    </div>
-                </a>
-
-                <a href="downloads/wdigs/Selection_Criteria_Guide.pdf" class="document-link" download>
-                    <div class="document-text">
-                        <div class="document-title">Selection Criteria Guide</div>
-                        <div class="document-type">PDF</div>
-                    </div>
-                </a>
-
-                <a href="downloads/wdigs/Supporting_Documents_Checklist.pdf" class="document-link" download>
-                    <div class="document-text">
-                        <div class="document-title">Supporting Documents Checklist</div>
-                        <div class="document-type">PDF</div>
-                    </div>
+                <a href="grants.html" class="btn btn-teal">
+                    Workplace Disability Grant Scheme
                 </a>
             </div>
         </div>
