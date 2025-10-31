@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmployAbility Toolkit - Papua New Guinea</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Section */
+        .hero {
+            background: #3B7C7C;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .hero img {
+            max-width: 600px;
+            width: 100%;
+            height: auto;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3em;
+            color: #f0f8f8;
+            margin-bottom: 10px;
+        }
+
+        .hero-description {
+            font-size: 1.1em;
+            color: #e8f5f5;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Button Section */
+        .button-section {
+            padding: 60px 20px;
+            background-color: #fff;
+        }
+
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 20px 30px;
+            font-size: 1.1em;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+        }
+
+        .btn-coral {
+            background-color: #e89baa;
+            color: white;
+        }
+
+        .btn-coral:hover {
+            background-color: #d8768a;
+        }
+
+        .btn-teal {
+            background-color: #3B7C7C;
+            color: white;
+        }
+
+        .btn-teal:hover {
+            background-color: #2d6060;
+        }
+
+        /* WDIGS Section */
+        .wdigs-section {
+            padding: 60px 20px;
+            background-color: #f5f9f9;
+        }
+
+        .wdigs-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .wdigs-header img {
+            max-width: 500px;
+            width: 100%;
+            height: auto;
+            margin-bottom: 30px;
+            border-radius: 10px;
+        }
+
+        .wdigs-header h2 {
+            font-size: 2.5em;
+            color: #3B7C7C;
+            margin-bottom: 20px;
+        }
+
+        .wdigs-description {
+            max-width: 800px;
+            margin: 0 auto 50px;
+            text-align: center;
+            font-size: 1.15em;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .documents-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .document-link {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #3B7C7C;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .document-link:hover {
+            background-color: #e8f5f5;
+            transform: translateX(5px);
+        }
+
+        .document-text {
+            flex: 1;
+        }
+
+        .document-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .document-type {
+            font-size: 0.85em;
+            color: #888;
+        }
+
+        /* Acknowledgement Section */
+        .acknowledgement {
+            padding: 60px 20px;
+            background-color: #fff;
+        }
+
+        .acknowledgement-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .acknowledgement h3 {
+            font-size: 1.8em;
+            color: #3B7C7C;
+            margin-bottom: 25px;
+        }
+
+        .acknowledgement p {
+            font-size: 1.05em;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .logo-container {
+            margin-top: 40px;
+        }
+
+        .logo-container img {
+            max-width: 300px;
+            width: 100%;
+            height: auto;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #3B7C7C;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1em;
+            }
+
+            .wdigs-header h2 {
+                font-size: 1.8em;
+            }
+
+            .btn {
+                padding: 15px 20px;
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <img src="images/illustration.jpg" alt="EmployAbility Toolkit Illustration">
+            <h1>EmployAbility Toolkit</h1>
+            <p class="hero-subtitle">Improving inclusion and accessibility in the workplace</p>
+            <p class="hero-description">Guidance and recommendations for employers</p>
+        </div>
+    </section>
+
+    <!-- Download Buttons Section -->
+    <section class="button-section">
+        <div class="container">
+            <div class="button-grid">
+                <a href="downloads/EmployAbility_Toolkit.pdf" class="btn btn-coral" download>
+                    Download the Toolkit (PDF)
+                </a>
+                <a href="downloads/Case_Studies.pdf" class="btn btn-coral" download>
+                    Download Case Studies (PDF)
+                </a>
+                <a href="video-case-studies.html" class="btn btn-teal">
+                    EmployAbility Video Case Studies
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WDIGS Section -->
+    <section class="wdigs-section" id="wdigs">
+        <div class="container">
+            <div class="wdigs-header">
+                <h2>The Workplace Disability Inclusion Grant Scheme</h2>
+            </div>
+            <div class="wdigs-description">
+                <p>The Workplace Disability Inclusion Grant Scheme (WDIGS) provides financial support to PNG businesses to create employment opportunities for persons with disability. The scheme recognises that employment is a fundamental human right and aims to reduce barriers that prevent persons with disability from participating in PNG's formal business sector.</p>
+            </div>
+
+            <h3 style="text-align: center; color: #3B7C7C; margin-bottom: 30px; font-size: 1.5em;">Application Package Documents</h3>
+
+            <div class="documents-grid">
+                <a href="downloads/wdigs/Application_Guidelines.pdf" class="document-link" download>
+                    <div class="document-text">
+                        <div class="document-title">Application Guidelines</div>
+                        <div class="document-type">PDF</div>
+                    </div>
+                </a>
+
+                <a href="downloads/wdigs/Eligibility_Checklist.pdf" class="document-link" download>
+                    <div class="document-text">
+                        <div class="document-title">Eligibility Checklist</div>
+                        <div class="document-type">PDF</div>
+                    </div>
+                </a>
+
+                <a href="downloads/wdigs/Application_Form.docx" class="document-link" download>
+                    <div class="document-text">
+                        <div class="document-title">Application Form</div>
+                        <div class="document-type">DOCX</div>
+                    </div>
+                </a>
+
+                <a href="downloads/wdigs/Project_Costings_Template.xlsx" class="document-link" download>
+                    <div class="document-text">
+                        <div class="document-title">Project Costings Template</div>
+                        <div class="document-type">XLSX</div>
+                    </div>
+                </a>
+
+                <a href="downloads/wdigs/Workplan_Template.docx" class="document-link" download>
+                    <div class="document-text">
+                        <div class="document-title">Workplan Template</div>
+                        <div class="document-type">DOCX</div>
+                    </div>
+                </a>
+
+                <a href="downloads/wdigs/Selection_Criteria_Guide.pdf" class="document-link" download>
+                    <div class="document-text">
+                        <div class="document-title">Selection Criteria Guide</div>
+                        <div class="document-type">PDF</div>
+                    </div>
+                </a>
+
+                <a href="downloads/wdigs/Supporting_Documents_Checklist.pdf" class="document-link" download>
+                    <div class="document-text">
+                        <div class="document-title">Supporting Documents Checklist</div>
+                        <div class="document-type">PDF</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Acknowledgement Section -->
+    <section class="acknowledgement">
+        <div class="acknowledgement-content">
+            <h3>Acknowledgement</h3>
+            <p>The EmployAbility project is an initiative supported by the Australian Government. It is implemented by the Australia Papua New Guinea Economic Partnership (APEP). APEP's goal is to support Papua New Guinea to have a resilient and diversified economy capable of lifting the standard of living for all Papua New Guineans.</p>
+            <p>Through the creation of dynamic and contextualised Case Studies and a Toolkit, as well as the delivery of fit-for-purpose capacity development training, the EmployAbility project seeks to contribute to increased participation of people with disabilities in the employment market, as well as increased understanding of disability and inclusion in PNG.</p>
+            <div class="logo-container">
+                <img src="images/logo.png" alt="PNG-Australia Partnership">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 EmployAbility Project | Australia Papua New Guinea Economic Partnership (APEP)</p>
+    </footer>
+
+</body>
+</html>
