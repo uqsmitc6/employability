@@ -31,35 +31,30 @@
             display: flex;
             align-items: center;
             position: relative;
-            overflow: hidden;
         }
 
         .hero-content {
             max-width: 1400px;
             margin: 0 auto;
-            position: relative;
+            display: grid;
+            grid-template-columns: 500px 1fr;
+            gap: 40px;
+            align-items: center;
             width: 100%;
         }
 
         .hero-image {
-            width: 100%;
             position: relative;
         }
 
         .hero-text {
-            position: absolute;
-            left: 60px;
-            top: 50%;
-            transform: translateY(-50%);
-            max-width: 500px;
-            z-index: 10;
+            padding-right: 20px;
         }
 
         .hero img {
-            max-width: 100%;
+            max-width: 85%;
             width: 100%;
             height: auto;
-            border-radius: 10px;
         }
 
         .hero h1 {
@@ -118,7 +113,7 @@
 
         .button-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 30px;
             max-width: 900px;
             margin: 0 auto;
@@ -280,18 +275,17 @@
                 min-height: auto;
             }
 
-            .hero-text {
-                position: relative;
-                left: 0;
-                top: 0;
-                transform: none;
-                max-width: 100%;
-                margin-bottom: 30px;
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
             }
 
-            .hero-content {
-                display: flex;
-                flex-direction: column;
+            .hero-text {
+                padding-right: 0;
+            }
+
+            .hero img {
+                max-width: 100%;
             }
 
             .hero h1 {
