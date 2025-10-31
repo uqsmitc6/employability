@@ -25,42 +25,83 @@
 
         /* Header Section */
         .hero {
-            background: #3B7C7C;
-            padding: 60px 20px;
-            text-align: center;
+            background: #2a2a2a;
+            padding: 80px 20px;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
         }
 
         .hero-content {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-text {
+            text-align: left;
         }
 
         .hero img {
-            max-width: 600px;
+            max-width: 100%;
             width: 100%;
             height: auto;
-            margin-bottom: 30px;
             border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
         .hero h1 {
-            font-size: 3em;
+            font-size: 3.5em;
             color: #ffffff;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            font-weight: 700;
         }
 
         .hero-subtitle {
-            font-size: 1.3em;
-            color: #f0f8f8;
-            margin-bottom: 10px;
+            font-size: 1.5em;
+            color: #e8e8e8;
+            margin-bottom: 15px;
+            font-weight: 400;
         }
 
         .hero-description {
+            font-size: 1.2em;
+            color: #b8b8b8;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 18px 35px;
+            background: #e89baa;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
             font-size: 1.1em;
-            color: #e8f5f5;
-            max-width: 800px;
-            margin: 0 auto;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(232, 155, 170, 0.3);
+        }
+
+        .hero-cta:hover {
+            background: #d8768a;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(232, 155, 170, 0.4);
+        }
+
+        .hero-cta::after {
+            content: '→';
+            font-size: 1.2em;
         }
 
         /* Button Section */
@@ -228,12 +269,26 @@
 
         /* Responsive */
         @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .hero {
+                padding: 60px 20px;
+                min-height: auto;
+            }
+
             .hero h1 {
-                font-size: 2em;
+                font-size: 2.2em;
             }
 
             .hero-subtitle {
-                font-size: 1.1em;
+                font-size: 1.2em;
+            }
+
+            .hero-description {
+                font-size: 1em;
             }
 
             .wdigs-header h2 {
@@ -251,15 +306,20 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <img src="images/illustration.jpg" alt="EmployAbility Toolkit Illustration">
-            <h1>EmployAbility Toolkit</h1>
-            <p class="hero-subtitle">Improving inclusion and accessibility in the workplace</p>
-            <p class="hero-description">Guidance and recommendations for employers</p>
+            <div class="hero-text">
+                <h1>EmployAbility Toolkit</h1>
+                <p class="hero-subtitle">Improving inclusion and accessibility in the workplace</p>
+                <p class="hero-description">Guidance and recommendations for employers</p>
+                <a href="#downloads" class="hero-cta">Explore resources</a>
+            </div>
+            <div class="hero-image">
+                <img src="images/illustration.jpg" alt="EmployAbility Toolkit Illustration">
+            </div>
         </div>
     </section>
 
     <!-- Download Buttons Section -->
-    <section class="button-section">
+    <section class="button-section" id="downloads">
         <div class="container">
             <div class="button-grid">
                 <a href="downloads/EmployAbility_Toolkit.pdf" class="btn btn-coral" download>
