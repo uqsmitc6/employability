@@ -24,23 +24,55 @@
             padding: 0 20px;
         }
 
-        /* Header */
+        /* Header Section */
         .header {
             background: #ffffff;
-            padding: 60px 20px;
-            text-align: center;
+            padding: 80px 20px;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .header-content {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 450px 1fr;
+            gap: 80px;
+            align-items: center;
+            width: 100%;
+        }
+
+        .header-text {
+            padding-right: 20px;
+        }
+
+        .header-image {
+            position: relative;
+            display: flex;
+            justify-content: center;
         }
 
         .header img {
-            max-width: 700px;
-            width: 80%;
-            margin-bottom: 30px;
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+            max-height: 550px;
+            object-fit: contain;
         }
 
         .header h1 {
             font-size: 2.5em;
+            color: #49274B;
             margin-bottom: 10px;
+        }
+
+        .header-subtitle {
+            font-size: 1em;
             color: #2a2a2a;
+            margin-top: 20px;
+            line-height: 1.5;
         }
 
         .back-link {
@@ -132,12 +164,26 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            .documents-grid {
+            .header {
+                padding: 40px 20px;
+                min-height: auto;
+            }
+
+            .header-content {
                 grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .header-text {
+                padding-right: 0;
             }
 
             .header h1 {
                 font-size: 1.8em;
+            }
+
+            .documents-grid {
+                grid-template-columns: 1fr;
             }
 
             .section-heading {
@@ -149,10 +195,16 @@
 <body>
     <!-- Header -->
     <div class="header">
-        <img src="images/hero-grants.jpg" alt="Workplace Disability Grant Scheme">
-        <h1>Workplace Disability Inclusion Grant Scheme</h1>
-        <p style="margin-top: 20px; font-size: 1em;"><strong>Application deadline – 30 November 2025</strong></p>
-        <p style="margin-top: 10px; font-size: 1em;"><strong>Any questions, please contact <a href="mailto:info@cufa.org.au" style="color: #067771; text-decoration: none;">info@cufa.org.au</a></strong></p>
+        <div class="header-content">
+            <div class="header-text">
+                <h1>Workplace Disability Inclusion Grant Scheme</h1>
+                <p class="header-subtitle"><strong>Application deadline – 30 November 2025</strong></p>
+                <p class="header-subtitle"><strong>Any questions, please contact <a href="mailto:info@cufa.org.au" style="color: #067771; text-decoration: none;">info@cufa.org.au</a></strong></p>
+            </div>
+            <div class="header-image">
+                <img src="images/hero-grants.jpg" alt="Workplace Disability Grant Scheme">
+            </div>
+        </div>
     </div>
 
     <!-- Back Link -->

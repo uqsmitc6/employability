@@ -24,26 +24,51 @@
             padding: 0 20px;
         }
 
-        /* Header */
+        /* Header Section */
         .header {
             background: #ffffff;
-            padding: 60px 20px;
-            text-align: center;
+            padding: 80px 20px;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .header-content {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 450px 1fr;
+            gap: 80px;
+            align-items: center;
+            width: 100%;
+        }
+
+        .header-text {
+            padding-right: 20px;
+        }
+
+        .header-image {
+            position: relative;
+            display: flex;
+            justify-content: center;
         }
 
         .header img {
-            max-width: 700px;
-            width: 80%;
-            margin-bottom: 30px;
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+            max-height: 550px;
+            object-fit: contain;
         }
 
         .header h1 {
             font-size: 2.5em;
+            color: #49274B;
             margin-bottom: 10px;
-            color: #2a2a2a;
         }
 
-        .header p {
+        .header-subtitle {
             font-size: 1.1em;
             color: #666;
         }
@@ -135,12 +160,26 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            .videos-grid {
+            .header {
+                padding: 40px 20px;
+                min-height: auto;
+            }
+
+            .header-content {
                 grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .header-text {
+                padding-right: 0;
             }
 
             .header h1 {
                 font-size: 1.8em;
+            }
+
+            .videos-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -148,9 +187,15 @@
 <body>
     <!-- Header -->
     <div class="header">
-        <img src="images/hero-video-case-studies.jpg" alt="EmployAbility Video Case Studies">
-        <h1>EmployAbility Video Case Studies</h1>
-        <p>Real stories of inclusion and accessibility in PNG workplaces</p>
+        <div class="header-content">
+            <div class="header-text">
+                <h1>EmployAbility Video Case Studies</h1>
+                <p class="header-subtitle">Real stories of inclusion and accessibility in PNG workplaces</p>
+            </div>
+            <div class="header-image">
+                <img src="images/hero-video-case-studies.jpg" alt="EmployAbility Video Case Studies">
+            </div>
+        </div>
     </div>
 
     <!-- Back Link -->
